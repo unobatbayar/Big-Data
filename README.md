@@ -1,2 +1,1 @@
-# multiprocessing
-learn about parallel processing with multiprocessing
+multiprocessing for big data 
