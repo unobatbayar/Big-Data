@@ -16,8 +16,11 @@ class wordcount(MRJob):
             yield (word.lower(), 1)
 
 #and the reducer method goes after this line
+#added, now only shows words that appear 10 or more times
     def reducer(self, word, counts):
-        yield word, (sum(counts))
+        summ = (sum(counts))
+        if summ >= 10:
+            yield word, (summ)
 
 if __name__ == '__main__':
     wordcount.run()
