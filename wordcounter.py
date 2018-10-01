@@ -1,4 +1,4 @@
-"""Lab 1. Basic wordcount
+"""Lab 1. Basic wordcount using MapReduce model
 """
 from mrjob.job import MRJob
 import re
