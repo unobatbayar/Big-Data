@@ -1,5 +1,4 @@
 """Lab 1. Basic wordcount
-@author uno
 """
 from mrjob.job import MRJob
 import re
