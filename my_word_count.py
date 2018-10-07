@@ -1,4 +1,4 @@
-#mapreduce - taken from somewhere in the internet
+#mapreduce - taken from Pythonhosted.org see -> https://pythonhosted.org/mrjob/guides/quickstart.html
 
 from mrjob.job import MRJob
 
