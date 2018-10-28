@@ -7,7 +7,7 @@ import re
 WORD_REGEX = re.compile(r"\b\w+\b")
 
 #This line declares the class, that extends the MRJob format.
-class wordcount(MRJob):
+class Lab1(MRJob):
 
 # this class will define two additional methods: the mapper method goes here
     def mapper(self, _, line):
@@ -23,4 +23,4 @@ class wordcount(MRJob):
             yield word, (summ)
 
 if __name__ == '__main__':
-    wordcount.run()
+    Lab1.run()
