@@ -22,8 +22,8 @@ class Lab2(MRJob):
         #if summ >= 10:
             yield word, sum(counts)
 #Lab2, adding a combiner
-    def combiner(self, word, counts):
-        yield(word, sum(counts))
+   def combiner(self, word, counts):
+       yield(word, sum(counts))
 
 if __name__ == '__main__':
     Lab2.run()
