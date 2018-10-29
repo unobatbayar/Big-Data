@@ -18,9 +18,12 @@ class Lab2(MRJob):
 #and the reducer method goes after this line
 #added, now only shows words that appear 10 or more times
     def reducer(self, word, counts):
-        summ = (sum(counts))
-        if summ >= 10:
-            yield word, (summ)
+        #summ = (sum(counts))
+        #if summ >= 10:
+            yield word, sum(counts)
+#Lab2, adding a combiner
+    def combiner(self, word, counts):
+        yield(word, sum(counts))
 
 if __name__ == '__main__':
     Lab2.run()
