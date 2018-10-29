@@ -1,4 +1,4 @@
-"""Lab 2. Basic wordcount using MapReduce 
+"""Lab 2. Basic wordcount
 """
 from mrjob.job import MRJob
 import re
@@ -20,10 +20,12 @@ class Lab2(MRJob):
     def reducer(self, word, counts):
         #summ = (sum(counts))
         #if summ >= 10:
-            yield word, sum(counts)
-#Lab2, adding a combiner
-   def combiner(self, word, counts):
-       yield(word, sum(counts))
+        yield word, sum(counts)
+
+# Lab2 Adding a Combiner
+    def combiner(self, word, counts):
+       yield word, sum(counts)
 
 if __name__ == '__main__':
+    Lab2.JOBCONF= { 'mapreduce.job.reduces': '3' }
     Lab2.run()
