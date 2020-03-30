@@ -10,4 +10,3 @@
   <sub> Built with ❤️️ by <a href="https://www.twitter.com/unobatbayar">unobatbayar</a></sub>
 </div>
 
-Each folder represenets a topic and contains tutorial with readme instructions.
